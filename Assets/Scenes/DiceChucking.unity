@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -282,6 +282,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114544254256903796, guid: 715f94502cf4a564190d25258b4f14e9,
+        type: 2}
+      propertyPath: DiceList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4778990199429382, guid: 715f94502cf4a564190d25258b4f14e9, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -317,6 +322,22 @@ Prefab:
     - target: {fileID: 1058530177811600, guid: 715f94502cf4a564190d25258b4f14e9, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114544254256903796, guid: 715f94502cf4a564190d25258b4f14e9,
+        type: 2}
+      propertyPath: Dice
+      value: 
+      objectReference: {fileID: 1349318824335062, guid: 6667a6b5a7e9b1d41bf55eeb5d99f6b4,
+        type: 2}
+    - target: {fileID: 114544254256903796, guid: 715f94502cf4a564190d25258b4f14e9,
+        type: 2}
+      propertyPath: DiceCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114544254256903796, guid: 715f94502cf4a564190d25258b4f14e9,
+        type: 2}
+      propertyPath: DiceList.Array.data[0]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 715f94502cf4a564190d25258b4f14e9, type: 2}
@@ -828,8 +849,8 @@ RectTransform:
   m_Father: {fileID: 14448579}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -970,7 +991,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2042344576}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -1075,17 +1096,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1474595467}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 531750545}
-  m_Father: {fileID: 2054399996}
-  m_RootOrder: 0
+  m_Father: {fileID: 2042344576}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 10, y: 10}
+  m_AnchoredPosition: {x: 367, y: 10}
   m_SizeDelta: {x: 110, y: 30}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1474595469
@@ -1110,7 +1131,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 1}
     m_PressedColor: {r: 0.9245283, g: 0.9245283, b: 0.9245283, a: 1}
-    m_DisabledColor: {r: 0.8773585, g: 0.55869526, b: 0.55869526, a: 0.5019608}
+    m_DisabledColor: {r: 0.8773585, g: 0.55869526, b: 0.55869526, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1127,10 +1148,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114544254256903796, guid: 715f94502cf4a564190d25258b4f14e9,
-          type: 2}
-        m_MethodName: SpawnDice
-        m_Mode: 1
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1206,7 +1226,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1256,7 +1276,7 @@ GameObject:
   - component: {fileID: 1786216891}
   - component: {fileID: 1786216890}
   m_Layer: 5
-  m_Name: DiceCount
+  m_Name: DiceCounter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1275,13 +1295,13 @@ RectTransform:
   - {fileID: 842056019}
   - {fileID: 697702251}
   m_Father: {fileID: 2042344576}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -60, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 70, y: 0}
   m_SizeDelta: {x: 50, y: 30}
-  m_Pivot: {x: 0, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1786216890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1320,13 +1340,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1786216891}
   m_TextComponent: {fileID: 697702252}
   m_Placeholder: {fileID: 842056020}
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 1
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -1379,6 +1399,112 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1786216888}
   m_CullTransparentMesh: 0
+--- !u!1 &1925379272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1058530177811600, guid: 715f94502cf4a564190d25258b4f14e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 281165146}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1925379277}
+  - component: {fileID: 1925379276}
+  - component: {fileID: 1925379275}
+  - component: {fileID: 1925379274}
+  - component: {fileID: 1925379273}
+  m_Layer: 0
+  m_Name: DiceSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1925379273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114544254256903796, guid: 715f94502cf4a564190d25258b4f14e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 281165146}
+  m_GameObject: {fileID: 1925379272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad09ce4f67a446f4ab570b62bf620a21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DiceList:
+  - {fileID: 0}
+  Dice: {fileID: 1349318824335062, guid: 6667a6b5a7e9b1d41bf55eeb5d99f6b4, type: 2}
+--- !u!135 &1925379274
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 135336863950068250, guid: 715f94502cf4a564190d25258b4f14e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 281165146}
+  m_GameObject: {fileID: 1925379272}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1925379275
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 23067256629663900, guid: 715f94502cf4a564190d25258b4f14e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 281165146}
+  m_GameObject: {fileID: 1925379272}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1925379276
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 33994251838573766, guid: 715f94502cf4a564190d25258b4f14e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 281165146}
+  m_GameObject: {fileID: 1925379272}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1925379277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4778990199429382, guid: 715f94502cf4a564190d25258b4f14e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 281165146}
+  m_GameObject: {fileID: 1925379272}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2042344575
 GameObject:
   m_ObjectHideFlags: 0
@@ -1389,6 +1515,8 @@ GameObject:
   - component: {fileID: 2042344576}
   - component: {fileID: 2042344578}
   - component: {fileID: 2042344577}
+  - component: {fileID: 2042344579}
+  - component: {fileID: 2042344580}
   m_Layer: 5
   m_Name: DiceSelector
   m_TagString: Untagged
@@ -1406,16 +1534,17 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1237968956}
   - {fileID: 2052587730}
   - {fileID: 1786216889}
-  - {fileID: 1237968956}
+  - {fileID: 1474595468}
   m_Father: {fileID: 2054399996}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 10, y: 0}
-  m_SizeDelta: {x: 350, y: 50}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -250, y: 0}
+  m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2042344577
 MonoBehaviour:
@@ -1451,6 +1580,33 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2042344575}
   m_CullTransparentMesh: 0
+--- !u!114 &2042344579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2042344575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33290606650fb8f4583ea58ea22d68db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Slider: {fileID: 2052587731}
+  InputField: {fileID: 1786216890}
+--- !u!114 &2042344580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2042344575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7ab18a0f3f1be940af26ca539129ef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: {fileID: 1474595469}
+  InputField: {fileID: 1786216890}
+  diceSpawner: {fileID: 1925379272}
 --- !u!1 &2052587729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,11 +1637,11 @@ RectTransform:
   - {fileID: 1411791638}
   - {fileID: 14448579}
   m_Father: {fileID: 2042344576}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -70, y: 0}
   m_SizeDelta: {x: 200, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2052587731
@@ -1529,17 +1685,17 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 10
-  m_WholeNumbers: 0
-  m_Value: 0
+  m_WholeNumbers: 1
+  m_Value: 5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
         m_MethodName: 
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1574,7 +1730,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1474595468}
   - {fileID: 2042344576}
   m_Father: {fileID: 757172602}
   m_RootOrder: 0
